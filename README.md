@@ -1,16 +1,65 @@
-# React + Vite
+# MEC CHILL - Landing Page Profissional
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing Page desenvolvida para a **MEC CHILL**, empresa especializada em Refrigeração Industrial e Comercial em Belo Horizonte e Região. O foco do projeto é a **conversão de leads** e a apresentação de autoridade técnica.
 
-Currently, two official plugins are available:
+🔗 **Link do Projeto**: [Acesse aqui](https://mecchill.com.br) (Substitua pela URL final se houver)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## React Compiler
+O projeto foi construído com uma stack moderna focada em performance e manutenibilidade:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **[React](https://react.dev/)**: Biblioteca principal para construção da interface.
+*   **[Vite](https://vitejs.dev/)**: Build tool ultrarrápida para desenvolvimento e produção.
+*   **Javascript (ES6+)**: Lógica robusta e atualizada.
+*   **CSS3 Moderno**:
+    *   Variáveis CSS (`var(--color-accent)`) para consistência de tema.
+    *   Flexbox e Grid Layout para responsividade total.
+    *   Animações nativas (`@keyframes`, `transitions`) sem peso extra de bibliotecas pesadas.
+*   **[Lucide React](https://lucide.dev/)**: Ícones vetoriais leves e modernos.
 
-## Expanding the ESLint configuration
+## ✨ Funcionalidades Principais
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Orçamento via WhatsApp**:
+    *   Formulário inteligente (Modal) que captura dados do cliente.
+    *   Direciona automaticamente para o WhatsApp da empresa com mensagem pré-formatada.
+    *   Botão Flutuante (Desktop) e Barra Fixa (Mobile) para contato rápido.
+
+2.  **Design Premium & Responsivo**:
+    *   Tema "Industrial Dark" combinando tons escuros com o Laranja de segurança.
+    *   **Mobile First**: Barra de navegação inferior estilo "App" em celulares.
+    *   **Scroll Reveal**: Elementos deslizam suavemente ao aparecer na tela.
+
+3.  **Seções Estratégicas**:
+    *   **Timeline**: Processo visual de atendimento passo-a-passo.
+    *   **Galeria**: Grid interativo mostrando áreas de atuação (Câmaras Frias, Chillers, etc.).
+    *   **Trust Strip**: Faixa infinita com marcas de parceiros (Bitzer, Danfoss, etc.).
+    *   **FAQ**: Tira-dúvidas estilo acordeão para quebrar objeções.
+
+## 🛠️ Como Rodar o Projeto
+
+Pré-requisitos: Ter o [Node.js](https://nodejs.org/) instalado.
+
+1.  **Clone o repositório**:
+    ```bash
+    git clone https://github.com/RobsonMarcolino/mec-chill-site.git
+    cd mec-chill-site
+    ```
+
+2.  **Instale as dependências**:
+    ```bash
+    npm install
+    ```
+
+3.  **Rode o servidor local**:
+    ```bash
+    npm run dev
+    ```
+
+4.  **Gere a versão de produção** (para publicar):
+    ```bash
+    npm run build
+    ```
+
+## 📄 Licença
+
+Desenvolvido exclusivamente para MEC CHILL. Todos os direitos reservados.
