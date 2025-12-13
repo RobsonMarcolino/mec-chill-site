@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://robsonmarcolino.github.io/mec-chill-site/sitemap.xml
