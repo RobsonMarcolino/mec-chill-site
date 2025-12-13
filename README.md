@@ -35,31 +35,5 @@ O projeto foi construído com uma stack moderna focada em performance e manuteni
     *   **Trust Strip**: Faixa infinita com marcas de parceiros (Bitzer, Danfoss, etc.).
     *   **FAQ**: Tira-dúvidas estilo acordeão para quebrar objeções.
 
-## 🛠️ Como Rodar o Projeto
-
-Pré-requisitos: Ter o [Node.js](https://nodejs.org/) instalado.
-
-1.  **Clone o repositório**:
-    ```bash
-    git clone https://github.com/RobsonMarcolino/mec-chill-site.git
-    cd mec-chill-site
-    ```
-
-2.  **Instale as dependências**:
-    ```bash
-    npm install
-    ```
-
-3.  **Rode o servidor local**:
-    ```bash
-    npm run dev
-    ```
-
-4.  **Gere a versão de produção** (para publicar):
-    ```bash
-    npm run build
-    ```
-
-## 📄 Licença
 
 Desenvolvido exclusivamente para MEC CHILL. Todos os direitos reservados.
