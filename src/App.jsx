@@ -57,13 +57,16 @@ function App() {
       <main>
         <Hero onOpenQuoteModal={openQuoteModal} />
         <Brands /> {/* Trust Strip */}
+
+        {/* Portfolio Moved Here */}
+        <ProjectGallery onOpenQuoteModal={openQuoteModal} />
+
         <About />
         <Services onOpenServiceModal={openServiceModal} onOpenQuoteModal={openQuoteModal} />
 
         {/* Timeline Process */}
         <ServiceTimeline onOpenQuoteModal={openQuoteModal} />
 
-        <ProjectGallery onOpenQuoteModal={openQuoteModal} />
         <CoverageMap />
         <FAQ />
       </main>

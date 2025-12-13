@@ -1,16 +1,16 @@
 import React from 'react';
 import '../styles/ProjectGallery.css';
 import camaraMain from '../assets/CamarasFrias.jpg';
-import camaraSec from '../assets/CamaraFrias2.jpg';
+import camaraSec from '../assets/Manutenc.png'; // Updated asset
 import geladeiras from '../assets/Geladeiras.jpg';
 import balcoes from '../assets/balcoes.jpg';
 import ilhas from '../assets/Ilhas.jpg';
-import cervejeiras from '../assets/RefrigeracaoComercial.png'; // Using available asset as proxy
+import cervejeiras from '../assets/Cervejeiras.jpg'; // Updated asset
 import { ArrowRight } from 'lucide-react';
 
 const ProjectGallery = ({ onOpenQuoteModal }) => {
     return (
-        <section className="gallery-section">
+        <section className="gallery-section reveal">
             <div className="container">
                 <div className="gallery-header text-center">
                     <span className="section-subtitle-dark" style={{ color: '#F7931E' }}>Portfólio Completo</span>
@@ -26,20 +26,21 @@ const ProjectGallery = ({ onOpenQuoteModal }) => {
                         <img src={camaraMain} alt="Câmaras Frias Industriais" className="gallery-img" />
                         <div className="gallery-overlay">
                             <div className="gallery-content">
-                                <h3>Câmaras Frias Industriais</h3>
+                                <h3>Câmaras Frias Comerciais</h3>
                                 <p>Projetos de grande porte e frigoríficos</p>
                                 <span className="gallery-btn"><ArrowRight /></span>
                             </div>
                         </div>
                     </div>
 
-                    {/* 2. Side Item - Camara 2 */}
+                    {/* 2. Side Item - Vitrines */}
+                    {/* 2. Side Item - Manutenção */}
                     <div className="gallery-item" onClick={onOpenQuoteModal}>
-                        <img src={camaraSec} alt="Manutenção Técnica" className="gallery-img" />
+                        <img src={camaraSec} alt="Manutenção Preventiva" className="gallery-img" />
                         <div className="gallery-overlay">
                             <div className="gallery-content">
-                                <h3>Manutenção Técnica</h3>
-                                <p>Preventiva e Corretiva</p>
+                                <h3>Manutenção Preventiva</h3>
+                                <p>Eficiência e durabilidade</p>
                             </div>
                         </div>
                     </div>
@@ -49,8 +50,8 @@ const ProjectGallery = ({ onOpenQuoteModal }) => {
                         <img src={geladeiras} alt="Geladeiras Comerciais" className="gallery-img" />
                         <div className="gallery-overlay">
                             <div className="gallery-content">
-                                <h3>Geladeiras</h3>
-                                <p>Expositores e Verticais</p>
+                                <h3>Geladeiras Comerciais</h3>
+                                <p>Conservação e eficiência</p>
                             </div>
                         </div>
                     </div>

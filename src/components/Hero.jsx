@@ -15,11 +15,11 @@ const Hero = ({ onOpenQuoteModal }) => {
                     <div className="hero-content-construct fade-in-up">
                         <span className="hero-pretitle">Manutenção | Projetos | Instalação</span>
                         <h1 className="hero-title-construct">
-                            Soluções Fortes em <br />
+                            Soluções Técnicas em <br />
                             <span className="text-accent">Refrigeração</span>
                         </h1>
                         <p className="hero-desc-construct">
-                            Garantimos a eficiência do seu negócio com serviços especializados em câmaras frias, chillers e ar condicionado.
+                            Garantimos a eficiência do seu negócio com serviços especializados em Câmaras Frias, Balcões, Ilhas, Cervejeiras e Expositores.
                         </p>
                         <div className="hero-btns">
                             <button onClick={onOpenQuoteModal} className="btn-construct-primary">
@@ -50,7 +50,7 @@ const Hero = ({ onOpenQuoteModal }) => {
                                 <Zap size={32} color="#fff" />
                             </div>
                             <h3>Serviços Flexíveis</h3>
-                            <p>Atendimento todos os dias de 07h às 19h para sua indústria.</p>
+                            <p>Atendimento de 8h às 18h para seu comércio.</p>
                         </div>
 
                         {/* Feature 3 */}

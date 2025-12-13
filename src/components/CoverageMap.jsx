@@ -4,8 +4,8 @@ import '../styles/CoverageMap.css';
 
 const CoverageMap = () => {
     const cities = [
-        'Belo Horizonte', 'Contagem', 'Betim', 'Nova Lima',
-        'Santa Luzia', 'Lagoa Santa', 'Sete Lagoas', 'Pedro Leopoldo'
+        'Belo Horizonte', 'Santa Luzia', 'Contagem', 'Ribeirão das Neves',
+        'Lagoa Santa', 'Pedro Leopoldo', 'Sabará', 'Vespasiano', 'Confins'
     ];
 
     return (

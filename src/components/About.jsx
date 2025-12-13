@@ -1,12 +1,12 @@
 import React from 'react';
 import { Target, CheckCircle, Users } from 'lucide-react';
-import aboutImg from '../assets/IMAGEM_CARD1.jpeg';
-import AnimatedCount from './AnimatedCount'; // Import
+import aboutImg from '../assets/FriaCamara.jpg';
+import AnimatedCount from './AnimatedCount';
 import '../styles/About.css';
 
 const About = () => {
     return (
-        <section id="sobre" className="about-construct">
+        <section id="sobre" className="about-construct reveal">
             <div className="container">
                 <div className="about-grid-construct">
 
@@ -36,7 +36,7 @@ const About = () => {
                         <span className="section-subtitle-construct">Sobre a MEC CHILL</span>
                         <h2 className="section-title-construct">
                             Líderes em Soluções de <br />
-                            <span className="text-accent">Refrigeração Industrial</span>
+                            <span className="text-accent">Refrigeração Comercial</span>
                         </h2>
 
                         <p className="about-desc-construct">
@@ -53,14 +53,13 @@ const About = () => {
                                 <CheckCircle size={20} className="af-icon" />
                                 <span>Contratos Flexíveis</span>
                             </div>
-                            {/* ... other items (keeping unchanged for brevity if no new content) ... */}
                             <div className="af-item">
                                 <CheckCircle size={20} className="af-icon" />
                                 <span>Instalação Certificada</span>
                             </div>
                             <div className="af-item">
                                 <CheckCircle size={20} className="af-icon" />
-                                <span>Todos os dias: 7h às 19h</span>
+                                <span>Seg a Sex: 8h às 18h</span>
                             </div>
                         </div>
 

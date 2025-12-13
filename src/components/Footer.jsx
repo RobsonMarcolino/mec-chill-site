@@ -17,7 +17,7 @@ const Footer = ({ onOpenQuoteModal }) => {
                             <img src={logo} alt="MEC CHILL" className="footer-logo-img" />
                         </a>
                         <p className="footer-desc">
-                            A melhor solução para o seu projeto de refrigeração industrial e comercial.
+                            A melhor solução para o seu projeto de refrigeração comercial.
                         </p>
                     </div>
 
@@ -36,8 +36,7 @@ const Footer = ({ onOpenQuoteModal }) => {
                     <div className="footer-col">
                         <h4>Fale Conosco</h4>
                         <p><strong>Telefone:</strong> (31) 9 9500-1193</p>
-                        <p className="mt-1"><strong>Email:</strong> contato@mecchill.com.br</p>
-                        <p className="mt-1"><strong>Horário:</strong> Todos os dias, 07h às 19h</p>
+                        <p className="mt-1"><strong>Horário:</strong> 08h às 18h</p>
                         <p className="mt-3 footer-address">
                             Atendimento Santa Luzia, <br /> Belo Horizonte e região.
                         </p>
@@ -45,15 +44,11 @@ const Footer = ({ onOpenQuoteModal }) => {
 
                     {/* Social/CTA Col */}
                     <div className="footer-col">
-                        <h4>Siga-nos</h4>
-                        <div className="footer-socials">
-                            <a href="#"><Facebook size={24} /></a>
-                            <a href="#"><Linkedin size={24} /></a>
-                            <a href="#"><Instagram size={24} /></a>
-                        </div>
+                        <h4>Solicite Agora</h4>
                         <button
                             onClick={onOpenQuoteModal}
                             className="btn-footer-cta"
+                            style={{ marginTop: '0' }}
                         >
                             Peça seu Orçamento
                         </button>

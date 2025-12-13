@@ -1,7 +1,7 @@
 import React from 'react';
 import { Settings, Wrench, Thermometer, Info, ArrowRight } from 'lucide-react';
-import img1 from '../assets/IMAGEM_CARD1.jpeg';
-import img7 from '../assets/IMAGEM_CARD7.jpeg';
+import img1 from '../assets/Fria1.webp';
+import img7 from '../assets/ManutencaoPrev.jpg';
 import img3 from '../assets/IMAGEM_CARD3.jpeg';
 import img5 from '../assets/IMAGEM_CARD5.jpeg';
 import camara2 from '../assets/CamaraFrias2.jpg'; // Specific for Modal 1
@@ -11,7 +11,7 @@ import '../styles/Services.css';
 const Services = ({ onOpenServiceModal, onOpenQuoteModal }) => {
     const servicesData = [
         {
-            title: 'Instalação Industrial',
+            title: 'Instalação Comercial',
             description: 'Montagem de câmaras frias e sistemas centrais de alta capacidade.',
             icon: Settings,
             imageSource: img1,
@@ -28,7 +28,7 @@ const Services = ({ onOpenServiceModal, onOpenQuoteModal }) => {
         },
         {
             title: 'Reparos de Emergência',
-            description: 'Atendimento todos os dias de 07h às 19h em BH e região.',
+            description: 'Atendimento de 8h às 18h em BH e região.',
             icon: Thermometer,
             imageSource: img3,
             // modalImage fallback to imageSource if undefined

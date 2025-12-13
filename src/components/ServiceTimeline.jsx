@@ -31,7 +31,7 @@ const ServiceTimeline = ({ onOpenQuoteModal }) => {
     ];
 
     return (
-        <section className="timeline-section">
+        <section className="timeline-section reveal">
             <div className="container">
                 <div className="timeline-header text-center">
                     <span className="section-subtitle-dark" style={{ color: '#F7931E' }}>Como Trabalhamos</span>
@@ -39,7 +39,7 @@ const ServiceTimeline = ({ onOpenQuoteModal }) => {
                         Processo de <span className="text-accent">Atendimento</span>
                     </h2>
                     <p className="timeline-desc-main">
-                        Simplicidade e eficiência para sua indústria não parar.
+                        Simplicidade e eficiência para seu comércio não parar.
                     </p>
                 </div>
 

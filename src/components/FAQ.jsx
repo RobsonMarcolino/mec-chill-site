@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { Plus, Minus, HelpCircle } from 'lucide-react';
 import '../styles/FAQ.css';
 
+import faqBg from '../assets/CameraFria2.jpg'; // Corrected asset
+
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(null);
 
     const faqs = [
         {
             question: "Qual o horário de atendimento?",
-            answer: "Funcionamos todos os dias, de 07:00 às 19:00, para garantir suporte contínuo à sua operação."
+            answer: "Funcionamos de 08:00 às 18:00, para garantir suporte contínuo à sua operação."
         },
         {
             question: "Atendem quais cidades?",
@@ -20,7 +22,7 @@ const FAQ = () => {
         },
         {
             question: "Trabalham com quais tipos de equipamentos?",
-            answer: "Especialistas em Câmaras Frias, Chillers, Balcões Frigoríficos, Ilhas de Congelados e Sistemas Centrais (Rack)."
+            answer: "Especialistas em Câmaras Frias, Cervejeiras, Balcões Frigoríficos, Ilhas de Congelados, Expositores de Bebida e Geladeiras Comerciais."
         },
         {
             question: "Emitem nota fiscal e garantia?",
@@ -34,7 +36,11 @@ const FAQ = () => {
 
     return (
         <section className="faq-section reveal">
-            <div className="container">
+            {/* Background Layers */}
+            <div className="faq-bg-layer" style={{ backgroundImage: `url(${faqBg})` }}></div>
+            <div className="faq-overlay-light"></div>
+
+            <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                 <div className="faq-header text-center">
                     <span className="section-subtitle-dark" style={{ color: '#F7931E' }}>Tira-Dúvidas</span>
                     <h2 className="section-title-dark" style={{ color: '#111' }}>
