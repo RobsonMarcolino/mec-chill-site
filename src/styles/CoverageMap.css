@@ -1,0 +1,64 @@
+.coverage-section {
+    padding: 80px 0;
+    background-color: #1a202c;
+    /* match navbar dark */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Abstract Map Background */
+.coverage-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image:
+        radial-gradient(#F7931E 2px, transparent 2px),
+        radial-gradient(#F7931E 2px, transparent 2px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    z-index: 0;
+}
+
+.coverage-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.coverage-text {
+    color: #9ca3af;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.cities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.city-badge {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.city-badge:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: translateY(-3px);
+}

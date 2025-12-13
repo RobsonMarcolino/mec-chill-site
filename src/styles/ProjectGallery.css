@@ -1,0 +1,134 @@
+.gallery-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 250px;
+    cursor: pointer;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.gallery-content h3 {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-content p {
+    color: #ddd;
+    font-size: 0.9rem;
+}
+
+.gallery-btn {
+    display: inline-flex;
+    margin-top: 15px;
+    color: var(--color-accent);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    transform: translateX(-10px);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.gallery-item:hover .gallery-btn {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* DESKTOP */
+@media (min-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 250px;
+    }
+
+    .highlight-item {
+        grid-column: span 2;
+        grid-row: span 2;
+        height: 100%;
+    }
+
+    .highlight-item .gallery-content h3 {
+        font-size: 2.5rem;
+    }
+}
+
+/* TABLET */
+@media (min-width: 600px) and (max-width: 899px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 250px;
+    }
+
+    .highlight-item {
+        grid-column: span 2;
+        grid-row: span 2;
+        height: 100%;
+    }
+}
+
+/* MOBILE REFINEMENT */
+@media (max-width: 599px) {
+    .gallery-section {
+        padding: 60px 0;
+    }
+
+    .gallery-item {
+        height: 220px;
+        /* Slightly shorter on mobile */
+    }
+
+    /* Highlight items just become normal items in 1-col grid */
+    .highlight-item {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 220px;
+    }
+
+    .highlight-item .gallery-content h3 {
+        font-size: 1.5rem;
+        /* Ensure highlight title isn't huge on mobile */
+    }
+}

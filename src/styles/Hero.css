@@ -1,0 +1,261 @@
+/* CONSTRUCTION STYLE HERO */
+.hero-wrapper {
+    position: relative;
+    background-color: #fff;
+    padding-bottom: 80px;
+    /* Space for the overlapping strip to sit */
+}
+
+.construction-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+}
+
+.hero-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    /* Zoom effect hint */
+    animation: zoomBg 20s infinite alternate;
+}
+
+@keyframes zoomBg {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* Reference Style Gradient: Dark angled overlay */
+.hero-overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(110deg,
+            rgba(17, 24, 39, 0.95) 0%,
+            rgba(17, 24, 39, 0.85) 45%,
+            rgba(17, 24, 39, 0.4) 100%);
+    z-index: 1;
+}
+
+/* Special Shape from Reference (Angled Cut) - Optional, maybe too complex for strict CSS without SVGs? 
+   Let's stick to the gradient for clean "cut" feel. */
+
+.hero-container-construct {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content-construct {
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero-pretitle {
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 15px;
+}
+
+.hero-title-construct {
+    font-family: 'Inter', sans-serif;
+    /* or Manrope */
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-desc-construct {
+    font-size: 1.15rem;
+    color: #d1d5db;
+    /* Gray 300 */
+    margin-bottom: 40px;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.hero-btns {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn-construct-primary {
+    background-color: var(--color-accent);
+    /* Orange */
+    color: #fff;
+    padding: 18px 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    /* Rounded Borders */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+    letter-spacing: 0.5px;
+    box-shadow: 0 10px 20px rgba(247, 147, 30, 0.3);
+}
+
+.btn-construct-primary:hover {
+    background-color: #e0800e;
+    /* Darker Orange */
+    transform: translateY(-2px);
+}
+
+/* Decorative Play Button */
+.play-btn-circle {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.play-icon {
+    color: var(--color-accent);
+    font-size: 1.2rem;
+    margin-left: 4px;
+    /* Optical center */
+}
+
+.play-btn-circle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* FLOATING FEATURES STRIP (The 3 Cards) */
+.features-strip {
+    position: relative;
+    z-index: 10;
+    margin-top: -100px;
+    /* Overlap Hero */
+    margin-bottom: 60px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0;
+    /* No gap, connected cards like reference? Or slight gap? Reference has gaps. */
+    gap: 30px;
+}
+
+.feature-card-construct {
+    background: #fff;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+    border-radius: 4px;
+    /* Square/Industrial */
+    text-align: left;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card-construct::before {
+    content: "0" counter(item);
+    /* Just numbering logic visual */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #f3f4f6;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.feature-card-construct h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card-construct p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-icon-box {
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Active Card (Center/Accent) */
+.feature-card-construct.active {
+    background-color: var(--color-accent);
+    /* Orange */
+    color: #fff;
+}
+
+.feature-card-construct.active h3,
+.feature-card-construct.active p {
+    color: #fff;
+}
+
+.feature-card-construct.active::before {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 900px) {
+    .hero-title-construct {
+        font-size: 2.8rem;
+    }
+
+    .features-strip {
+        margin-top: 0;
+        /* Remove overlap on mobile, stack normally */
+        background: #f9f9f9;
+        padding: 60px 0;
+    }
+
+    .hero-wrapper {
+        padding-bottom: 0;
+    }
+
+    .construction-hero {
+        height: auto;
+        padding: 100px 0;
+    }
+}

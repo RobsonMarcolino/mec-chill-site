@@ -1,0 +1,95 @@
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9990;
+    /* Below Modal (9999) but above content */
+    display: none;
+    /* Default hidden */
+    flex-direction: column;
+    align-items: flex-end;
+    text-decoration: none;
+    pointer-events: none;
+    /* Interaction only when visible/desktop */
+}
+
+/* Show only on Desktop (Mobile uses Sticky Bar) */
+@media (min-width: 769px) {
+    .floating-whatsapp {
+        display: flex;
+        pointer-events: auto;
+    }
+}
+
+.fw-icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation: pulse-green 2s infinite;
+    position: relative;
+}
+
+.floating-whatsapp:hover .fw-icon-box {
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.fw-tooltip {
+    background-color: #fff;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    position: relative;
+}
+
+.fw-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    right: 22px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #fff;
+}
+
+.floating-whatsapp:hover .fw-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Visibility State (Scroll Trigger) */
+.floating-whatsapp.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}

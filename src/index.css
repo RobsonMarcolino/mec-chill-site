@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+/* Added Teko */
+
+:root {
+  --color-accent: #F7931E;
+  --color-dark: #111827;
+  --color-gray: #374151;
+  --color-light: #F3F4F6;
+  --color-white: #FFFFFF;
+
+  --font-main: 'Inter', sans-serif;
+
+  --max-width: 1280px;
+  --header-height: 80px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-white);
+  color: var(--color-gray);
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding-bottom: 60px;
+  /* Space for Mobile Sticky Bar */
+}
+
+/* Utilities */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Mobile Container Padding Tweak */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-dark {
+  background-color: var(--color-dark);
+  color: #fff;
+}
+
+/* Typography Utilities */
+.section-title-dark {
+  font-family: 'Teko', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111;
+  /* Explicit Dark */
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.section-subtitle-dark {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+/* Animation Utilities */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SCROLL REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal-overlay {
+  z-index: 9999;
+}

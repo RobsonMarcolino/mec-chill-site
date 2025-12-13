@@ -1,0 +1,148 @@
+.timeline-section {
+    padding: 100px 0;
+    background-color: #f3f4f6;
+    /* Light gray background */
+}
+
+.timeline-desc-main {
+    max-width: 600px;
+    margin: 0 auto 60px;
+    color: #666;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.timeline-flow {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-steps-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Connector Line Desktop */
+.timeline-line-track {
+    position: absolute;
+    top: 40px;
+    /* Aligned with icon center (icon circle is 80px -> center 40px) */
+    left: 12%;
+    /* Start inside first item */
+    right: 12%;
+    /* End inside last item */
+    height: 4px;
+    background-color: #e5e7eb;
+    z-index: 1;
+}
+
+.timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.step-icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    /* Border matches background to "cut" the line */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    position: relative;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.timeline-step:hover .step-icon-circle {
+    transform: translateY(-5px);
+    background-color: var(--color-accent);
+    color: #fff;
+    border-color: #fde68a;
+    /* Soft orange/yellow halo */
+}
+
+.step-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    color: #111;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.step-desc {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.timeline-cta {
+    text-align: center;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .timeline-steps-container {
+        grid-template-columns: 1fr;
+        /* Stack vertically */
+        gap: 40px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .timeline-line-track {
+        /* Vertical line */
+        top: 0;
+        left: 40px;
+        /* Center of circle (80px/2) */
+        width: 4px;
+        height: 100%;
+        right: auto;
+    }
+
+    .timeline-step {
+        flex-direction: row;
+        /* Icon left, Text right */
+        text-align: left;
+        align-items: flex-start;
+        gap: 20px;
+        padding-left: 0;
+    }
+
+    .step-icon-circle {
+        min-width: 80px;
+        /* Prevent shrink */
+        margin-bottom: 0;
+    }
+
+    .timeline-line-track {
+        left: 40px;
+        /* Aligned with icon center */
+    }
+}

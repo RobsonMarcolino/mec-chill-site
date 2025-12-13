@@ -1,0 +1,124 @@
+.process {
+    background-color: #FFFFFF;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.process-header {
+    margin-bottom: 60px;
+}
+
+.process-badge {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: #fff;
+    padding: 8px 20px;
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.process .section-title {
+    color: var(--color-secondary);
+    /* Grey */
+    display: block;
+    font-size: 3rem;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Slightly larger min for better mobile readability */
+    gap: 30px;
+}
+
+.process-card {
+    border: 1px dashed var(--color-secondary);
+    /* Dashed border line */
+    border-radius: 8px;
+    padding: 40px 20px;
+    position: relative;
+    transition: all 0.3s ease;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Push icon to bottom */
+    min-height: 350px;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+    border-style: solid;
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.step-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-secondary);
+    /* Grey Default */
+    color: #fff;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.process-card:hover .step-badge {
+    background-color: var(--color-accent);
+    /* Orange on Hover */
+}
+
+.card-content h3 {
+    color: #333;
+    font-size: 1.5rem;
+    font-family: 'Teko', sans-serif;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: var(--color-secondary);
+}
+
+.card-content p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.step-icon {
+    margin-top: 30px;
+    font-size: 2rem;
+    color: var(--color-accent);
+    background-color: #FFF;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 30px auto 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (max-width: 768px) {
+    .process {
+        padding: 60px 0;
+    }
+
+    .process .section-title {
+        font-size: 2.2rem;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        /* Full width on mobile */
+        gap: 40px;
+    }
+}
