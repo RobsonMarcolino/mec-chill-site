@@ -2,7 +2,7 @@
 
 Landing Page desenvolvida para a **MEC CHILL**, empresa especializada em Refrigeração Industrial e Comercial em Belo Horizonte e Região. O foco do projeto é a **conversão de leads** e a apresentação de autoridade técnica.
 
-🔗 **Link do Projeto**: [Acesse aqui](https://mecchill.com.br) (Substitua pela URL final se houver)
+🔗 **Link do Projeto**: [Acesse aqui](https://mec-chill.vercel.app/)
 
 ## 🚀 Tecnologias Utilizadas
 
