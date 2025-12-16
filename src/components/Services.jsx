@@ -52,7 +52,7 @@ const Services = ({ onOpenServiceModal, onOpenQuoteModal }) => {
                 <div className="section-header-construct text-center">
                     <span className="section-subtitle-dark">O Que Nós Fazemos</span>
                     <h2 className="section-title-dark">
-                        Soluções Completas de <br /> <span className="text-accent">Engenharia e Refrigeração</span>
+                        Soluções Completas em <br /> <span className="text-accent">Refrigeração</span>
                     </h2>
                 </div>
 

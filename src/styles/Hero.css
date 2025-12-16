@@ -115,18 +115,18 @@
     border-radius: 50px;
     /* Rounded Borders */
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+    line-height: 1;
     gap: 10px;
-    transition: all 0.3s;
-    letter-spacing: 0.5px;
-    box-shadow: 0 10px 20px rgba(247, 147, 30, 0.3);
+    transform: translateY(-30px);
 }
 
 .btn-construct-primary:hover {
     background-color: #e0800e;
     /* Darker Orange */
-    transform: translateY(-2px);
+    transform: translateY(-26px);
 }
 
 /* Decorative Play Button */
